@@ -5,9 +5,8 @@ import {theme} from './styles/theme';
 import GlobalStyle from './styles/GlobalStyles';
 import ButtonContainerStyle from "./styles/ButtonContainerStyle";
 import ButtonGrid from "./styles/ButtonGrid";
-import {ButtonStyle, EqualButton, ResetButton} from "./styles/ButtonStyle";
+import {ButtonStyle, EqualButton, ResetButton, LongButtonContainer} from "./styles/ButtonStyle";
 import Calculator from "./styles/Calculator";
-import DisplayStyle from "./styles/DisplayStyle";
 import ContextProvider from './Context';
 import Display from './Display';
 import { Context } from './Context';
@@ -24,7 +23,6 @@ type ButtonProps = {
 const Button = ({type, children, isReset, isEqual, style, value}: ButtonProps) => {
     const [, dispatch] = React.useContext(Context);
     const handleClick = () => {
-        console.log(type);
         dispatch && dispatch({type: ActionType[type], payload: value?.toString() || children.toString() || '0'  });
     }
     if (isReset) {
@@ -64,16 +62,10 @@ function App() {
                                 <Button type="OPERATOR">x</Button>
                             </ButtonGrid>
 
-                            <div style={{
-                                display: 'flex',
-                                fontFamily: 'League Spartan',
-                                fontSize: 28,
-                                fontWeight: 700,
-                                color: '#ffffff'
-                            }}>
+                            <LongButtonContainer>
                                 <Button isReset={true} type="RESET" style={{textAlign: 'center', justifyContent: 'center', alignItems: 'center'}}>RESET</Button>
                                 <Button isEqual={true} type="OPERATOR" style={{textAlign: 'center', justifyContent: 'center', alignItems: 'center'}}>=</Button>
-                            </div>
+                          </LongButtonContainer>
                         </ButtonContainerStyle>
                     </Calculator>
                 </ContextProvider>

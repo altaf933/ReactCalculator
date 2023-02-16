@@ -4,7 +4,7 @@ import ButtonContainerStyle from "./styles/ButtonContainerStyle";
 import ButtonGrid from "./styles/ButtonGrid";
 import {ButtonStyle} from "./styles/ButtonStyle";
 import Calculator from "./styles/Calculator";
-import DisplayStyle from "./styles/DisplayStyle";
+import {DisplayStyle} from "./styles/DisplayStyle";
 
 type ButtonProps = {
 }

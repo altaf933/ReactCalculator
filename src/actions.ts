@@ -4,6 +4,7 @@ export enum  ActionType {
         DOT = "DOT",
         DELETE = "DEL",
         RESET = "RESET",
+        EQUAL = "EQUAL",
 }
 
 export type ACTION = {
@@ -16,6 +17,7 @@ export type State = {
     operand1 : number | null;
     opertand2: number | null;
     operator: string | null;
+    isOperatorPressed?: boolean;
 }
 
 export const INITIAL_STATE: State = {
