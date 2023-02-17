@@ -32,6 +32,7 @@ export const DisplayTextStyle = styled.div`
             display: flex;
    @media(max-width: 768px) {
             width: 327px;
+            height: 88px;
    }
   }
 `;

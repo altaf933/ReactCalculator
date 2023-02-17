@@ -14,7 +14,6 @@ const ButtonContainerStyle = styled.div`
    }
   flex-direction: column;
   > div {
-    background: ${(props) => props.theme.colors.display};
     border-radius: 10px;
     flex: 1;
     text-align: right;

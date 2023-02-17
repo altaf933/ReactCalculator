@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import './App.css';
 import { ThemeProvider } from "styled-components";
-import {theme} from './styles/theme';
+import {theme, theme2, theme3} from './styles/theme';
 import GlobalStyle from './styles/GlobalStyles';
 import ButtonContainerStyle from "./styles/ButtonContainerStyle";
 import ButtonGrid from "./styles/ButtonGrid";
@@ -11,6 +11,7 @@ import ContextProvider from './Context';
 import Display from './Display';
 import { Context } from './Context';
 import {ActionType} from './actions';
+import {ToggleNumber, ToggleView} from './styles/ToggleStyle';
 
 type ButtonProps = {
   children: React.ReactChild;
@@ -34,13 +35,43 @@ const Button = ({type, children, isReset, isEqual, style, value}: ButtonProps) =
     return (<ButtonStyle onClick={handleClick}>{children}</ButtonStyle>)
 };
 
+
 function App() {
+     const [type, setType] = useState('2');
+     const onThemeChange = (e:any) => {
+     const themeNumber = e.target.value;
+     console.log(typeof themeNumber);
+      setType(themeNumber);
+     }
+     const getThemeType = () => {
+         if(type === '2') {
+          return theme;
+         }
+         else if(type === '3') {
+          return theme2;
+         }
+         else if(type === '4') {
+          return theme3;
+         } else {
+          return theme;
+         }
+     }
     return (
         <>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={getThemeType}>
                 <ContextProvider>
                     <GlobalStyle />
                     <Calculator>
+                    <ToggleNumber>
+                    </ToggleNumber>
+                    <ToggleView>
+                    <input type="radio" defaultChecked={true} name="toggle" onClick={onThemeChange} value="2"></input>
+                    <label></label>
+                    <input type="radio" onClick={onThemeChange} name="toggle" value="3"></input>
+                    <label></label>
+                    <input type="radio" onClick={onThemeChange} name="toggle" value="4"></input>
+                    <label></label>
+                    </ToggleView>
                     <Display/> 
                         <ButtonContainerStyle>
                             <ButtonGrid className="button">
