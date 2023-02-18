@@ -11,16 +11,16 @@ const ButtonGrid = styled.div`
     font-weight: 700;
     font-size: 40px;
     line-height: 37px;
-    color: #434A59;
+    color: ${props => props.theme.colors.numberPadColor};
     letter-spacing: -0.666667px;
   > * {
     justify-content: center;
     align-items: center;
   }
    div:nth-child(4) {
-   background-image: url(${del});
+   background-image: url(${props => props.theme.delDeskButton});
    @media(max-width: 768px) { 
-   background-image: url(${mobileBlueButton});
+   background-image: url(${props => props.theme.delMobileButton});
    }
   }
 `;

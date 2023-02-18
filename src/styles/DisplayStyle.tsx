@@ -12,7 +12,7 @@ export const DisplayStyle = styled.div`
     border-radius: 10px;
     text-align: right;
     font-family: 'League Spartan';
-    color: #FFFFFF;
+    color: ${(props) => props.theme.colors.displayFontColor};
     font-style: normal;
     font-weight: 700;
     font-size: 56px;

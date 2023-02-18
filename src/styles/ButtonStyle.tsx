@@ -12,9 +12,9 @@ export const ButtonStyle = styled.div`
    height: 64px;
    margin: 13px 12px;
    display: flex;
-   background-image: url(${number_btn});
+   background-image: url(${props => props.theme.buttonImages});
    @media(max-width: 768px) {
-   background-image: url(${mobileGrayButton});
+   background-image: url(${props => props.theme.buttonMobile});
     width: 60px;
     height: 64px;
    margin: 8px 8px;
@@ -27,11 +27,11 @@ export const ResetButton = styled.div`
    height: 64px;
    display: flex;
    margin: 0px 21px 0px 5px;
-   background-image: url(${blue_rect});
+   background-image: url(${props => props.theme.resetDeskButton});
    @media(max-width: 768px) {
-    width: 133px;
+   width: 133px;
    height: 64px;
-   background-image: url(${rectangleBlueMobile});
+   background-image: url(${props => props.theme.resetMobileButton});
    margin: 0px 21px 0px 0px;
    }
 `;
@@ -64,10 +64,10 @@ export const EqualButton = styled.div`
     width: 227px;
    height: 64px;
    display: flex;
-   background-image: url(${red_rect});
+   background-image: url(${props => props.theme.equalDeskButton});
    @media(max-width: 768px) {
-    width: 133px;
+   width: 133px;
    height: 64px;
-   background-image: url(${rectangleRed});
+   background-image: url(${props => props.theme.equalMobileButton});
    }
 `;
