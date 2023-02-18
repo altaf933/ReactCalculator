@@ -61,6 +61,11 @@ function App() {
             <ThemeProvider theme={getThemeType}>
                 <ContextProvider>
                     <GlobalStyle />
+                    <ToggleNumber>
+                    <label>1</label>
+                    <label>2</label>
+                    <label>3</label>
+                    </ToggleNumber>
                     <Calculator>
                     <ToggleNumber>
                     </ToggleNumber>

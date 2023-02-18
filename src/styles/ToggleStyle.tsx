@@ -34,9 +34,16 @@ export const ToggleView = styled.div`
 export const ToggleNumber = styled.div`
   display: inline-block;
   position:absolute;
-  top: 1%;
-  right: 29%;
+  top: 2%;
+  right: 29.5%;
   label {
+    font-family: 'Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 13px;
+text-align: center;
+    color: ${(props) => props.theme.colors.displayFontColor};
   height: 16px;
   width: 16px;
   margin: 3px;

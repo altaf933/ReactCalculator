@@ -1,7 +1,5 @@
 
 import styled from "styled-components";
-import del from '../images/del.png';
-import mobileBlueButton from '../images/mobileBlueButton.png';
 const ButtonGrid = styled.div`
  display: grid;
   grid-template-columns: repeat(4, 1fr);

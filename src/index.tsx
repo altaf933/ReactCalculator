@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700;800&display=swap');
 </style>
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
