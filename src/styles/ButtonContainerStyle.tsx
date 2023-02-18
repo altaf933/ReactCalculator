@@ -10,7 +10,7 @@ const ButtonContainerStyle = styled.div`
   justify-content: center;
   padding: 23px 20px 23px 20px;
    @media(max-width: 768px) {
-  padding: 20px 10px 20px 10px;
+  padding: 16px 10px 20px 10px;
    }
   flex-direction: column;
   > div {

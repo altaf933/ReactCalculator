@@ -11,13 +11,22 @@ export const DisplayStyle = styled.div`
     background: ${(props) => props.theme.colors.display};
     border-radius: 10px;
     text-align: right;
-    font-family: 'League Spartan';
     color: ${(props) => props.theme.colors.displayFontColor};
+    font-family: 'League Spartan';
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
     line-height: 52px;
     letter-spacing: -0.933333px;
+   @media(max-width: 768px) {
+   
+font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 37px;
+letter-spacing: -0.666667px;
+   }
    }
   }
 `;

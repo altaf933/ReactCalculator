@@ -1,11 +1,5 @@
 
 import styled from "styled-components";
-import number_btn from '../images/number_btn.png';
-import red_rect from '../images/red_rect.png';
-import blue_rect from '../images/blue_rect.png';
-import mobileGrayButton from '../images/mobileGrayButton.png';
-import rectangleRed from '../images/rectangleRed.png';
-import rectangleBlueMobile from '../images/rectangleBlueMobile.png';
 
 export const ButtonStyle = styled.div`
     width: 101px;

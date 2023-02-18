@@ -11,7 +11,7 @@ import ContextProvider from './Context';
 import Display from './Display';
 import { Context } from './Context';
 import {ActionType} from './actions';
-import {ToggleNumber, ToggleView} from './styles/ToggleStyle';
+import {CalcText, ThemeLabel, ToggleNumber, ToggleView, TopContainer} from './styles/ToggleStyle';
 
 type ButtonProps = {
   children: React.ReactChild;
@@ -61,13 +61,14 @@ function App() {
             <ThemeProvider theme={getThemeType}>
                 <ContextProvider>
                     <GlobalStyle />
+                    <Calculator>
+                    <TopContainer>
+                    <CalcText>calc</CalcText>
+                    <ThemeLabel>THEME</ThemeLabel>
                     <ToggleNumber>
                     <label>1</label>
                     <label>2</label>
                     <label>3</label>
-                    </ToggleNumber>
-                    <Calculator>
-                    <ToggleNumber>
                     </ToggleNumber>
                     <ToggleView>
                     <input type="radio" defaultChecked={true} name="toggle" onClick={onThemeChange} value="2"></input>
@@ -77,6 +78,7 @@ function App() {
                     <input type="radio" onClick={onThemeChange} name="toggle" value="4"></input>
                     <label></label>
                     </ToggleView>
+                    </TopContainer>
                     <Display/> 
                         <ButtonContainerStyle>
                             <ButtonGrid className="button">
